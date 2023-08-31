@@ -227,22 +227,32 @@ LANDING PAGE
     border: none;
     background-color: #242424;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
+.fa-envelope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .scroll {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .scroll__icon {
     width: 20px;
     height: 30px;
-    border: 2px solid #242424;
+    border: 2px solid black;
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -253,7 +263,7 @@ LANDING PAGE
     content: "";
     width: 4px;
     height: 6px;
-    background-color: #242424;
+    background-color: black;
     border-radius: 2px;
     animation: scroll 1000ms infinite alternate-reverse;
 }
@@ -307,7 +317,7 @@ nav {
 }
 
 .fa-solid {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* 
@@ -580,6 +590,7 @@ FOOTER
 */
 
 footer {
+    position: relative;
     background-color: #242424;
     display: flex;
     padding: 2% 0;
@@ -607,5 +618,114 @@ footer {
 .footer__social--link,
 .footer__copyright {
     color: white;
+}
+
+/*
+
+SHAPES
+ 
+*/
+
+.shape {
+    position: fixed;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
+}
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+    .title {
+        font-size: 80px;
+    }
+    .header__para {
+        font-size: 20px;
+    }
+    .modal {
+        top: 0;
+        left: 0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    .modal__half {
+        width: 100%;
+    }
+    .shape--4 {
+        display: none;
+    }
+}
+
+/* Small phones  */
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 52px;
+    }
+    .header__para {
+        font-size: 18px;
+    }
+    .nav__link:first-child {
+        display: none;
+    }
+    .project__description--para {
+        display: none;
+    }
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .project__description--sub-title {
+        margin-bottom: 8px;
+    }
+    .modal__half {
+        padding: 40px;
+    }
 }
 
